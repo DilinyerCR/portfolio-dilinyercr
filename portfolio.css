@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ?-----backgrounds----- */
+    --portfolio-bg: hsla(0, 0%, 96%, 1);
+
+    --project-box-bg: hsla(0, 0%, 100%, 1);
+    --tech-used-bg: hsla(0, 0%, 100%, 1);
+    --project-tech-used-bg: hsla(0, 0%, 88%, 1);
+
+    /* ?-----Letters-Titles----- */
+    --section-title: hsla(212, 90%, 60%, 1);
+    --menu-titles: hsl(228deg, 5.26%, 18.63%, 1);
+    --paragraph-color: hsla(0, 0%, 46%, 1);
+
+    /* ?-----box-shadows----- */
+    --header-shadow: hsla(212, 38%, 68%, 1);
+    --pictures-box-shadow: hsla(212, 38%, 65%, 1);
+    --boxes-shadow: hsla(212, 38%, 86%, 1);
+}
+
+
+/* *=====================BASE===================== */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--portfolio-bg);
+}
+
+h3 {
+    font-size: 3.6rem;
+    color: var(--section-title);
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.paragraph {
+    color: var(--paragraph-color);
+}
+
+.primary-paragraph {
+    color: var(--menu-titles);
+}
+
+i {
+    cursor: pointer;
+}
+
+
+.portfolio-section {
+    padding: 60px 30px;
+    background-color: var(--portfolio-bg);
+    text-align: center;
+}
+
+.portfolio-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-box {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: var(--project-box-bg);
+    box-shadow: 1px 1px 8px var(--boxes-shadow);
+}
+
+.project-img-container {
+    height: 160px;
+    border-radius: 14px;
+    box-shadow: 1px 1px 8px var(--boxes-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-img-container img {
+    width: 100%;
+    border-radius: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Para imagenes con poco height */
+.project-img-container .imgheight {
+    width: 100%;
+    height: 100%;
+}
+
+.project-text-container {
+    margin-top: 30px;
+}
+
+.project-text-container .project-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.project-text-container .project-description {
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.project-tech-used {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px 0;
+    /* font-size: 1.8rem; */
+    font-weight: 600;
+}
+
+.project-tech-used p {
+    padding: 6px 12px;
+    border-radius: 14px;
+    background-color: var(--project-tech-used-bg);
+    font-size: 1.4rem;
+}
+
+.project-tech-used .primary-paragraph_todo-app {
+    font-size: 1.1rem;
+}
+
+.project-code-web {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.project-code-web a {
+    color: var(--section-title);
+}
+
+.project-code-web a i {
+    margin-left: 5px;
+    font-size: 2.2rem;
+}
+
+
+
+/* *=================HOVER================= */
+.header_menu-container a:hover,
+.footer-menu a:hover,
+i:hover {
+    color: var(--section-title);
+    transition: 0.3s;
+}
+
+
+
+.contact-box_write-me p:hover,
+.project-code-web a:hover,
+.AllMyProjects a:hover {
+    color: hsla(212, 90%, 50%, 1);
+    transition: 0.3s;
+}
+
+
+/* !================MEDIA QUERIES================ */
+@media screen and (min-width: 1920px) {
+    .portfolio-section {
+        padding: 60px 100px;
+    }
+}
